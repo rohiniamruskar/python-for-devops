@@ -26,18 +26,15 @@ def check_air_quality():
             print(f"\n📍 City: {city}")
             print(f" Current AQI: {api_aqi}")
              
-            # if-else comparison
-            
+            # if-else comparison 
             if api_aqi < user_aqi:
                 limit_status = "Within acceptable limit"
                 print ("Air quality is within your acceptable limit")
             else:
                limit_status = "Exceeds acceptable limit"
                print("Air quality excceds your limit")
-               
-
         
-            #AQI classification
+            # AQI classification
             if api_aqi <= 50:
                 level = "Good"
             elif api_aqi <= 100:
@@ -50,6 +47,7 @@ def check_air_quality():
                 level = "Hazardous "
             print(f"Air Quality level : {level}")
 
+            # processed data structure
             processed_data = {
                 "city": city,
                 "current_aqi": api_aqi,
@@ -59,13 +57,12 @@ def check_air_quality():
             
             }
 
-            # 🔹 Save to JSON file
+            # Save to JSON file
             with open("output.json", "w") as file:
                 json.dump(processed_data, file, indent=4)
 
         else:
             print("API returned error",data)
-
 
     else:
         print("HTTP Error:",response.status_code)
