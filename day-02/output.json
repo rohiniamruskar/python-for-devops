@@ -1,7 +1,7 @@
 {
     "city": "Nerul, Navi Mumbai, India",
-    "current_aqi": 97,
-    "aqi_level": "Moderate",
-    "user_threshold": 60,
+    "current_aqi": 115,
+    "aqi_level": "Unhealthy for Sensitive Groups",
+    "user_threshold": 90,
     "status": "Exceeds acceptable limit"
 }
